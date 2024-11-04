@@ -52,6 +52,7 @@ img {
     max-width: 100%;
 }
 .cabecera,
+.navegacion,
 .navegacion__lista,
 .presentacion,
 .habilidades,
@@ -86,35 +87,65 @@ img {
 /* ------------------------------ Sección Menú -------------------------------*/
 .header {
     background-color: var(--color-primario);
+    position: sticky;
+    top: 0;
 }
 .cabecera {
     align-items: center;
 }
-.cabecera__descripcion {
+.cabecera__contenedor {
     display: flex;
-    justify-content: start;
-    gap: 0.8rem;
+    justify-content: space-between;
+    align-items: center;
     width: 100%;
-    padding-bottom: 1.6rem;
 }
-.cabecera__descripcion_logo {
+.cabecera__logo_contenedor {
+    display: flex;
+    gap: 0.25rem;
+}
+.menu_icon {
+    height: 1.7rem;
+    cursor: pointer;
+}
+.cabecera__logo {
     width: 2.4rem;
     height: auto;
     object-fit: contain;
 }
-.cabecera__descripcion_titulo {
+.cabecera__titulo {
     font-size: 1.6rem;
     text-align: center;
     margin: 0;
 }
 .navegacion {
-    width: 100%;
+    opacity: 0;
+    visibility: hidden;
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 100vh;
+    width: 45%;
+    padding: 2rem 1.6rem;
+    background-color: #1c1c1c;
+    box-shadow: 0 0 0 100vmax rgba(0, 0, 0, .5);
+    gap: 1rem;
+    align-items: flex-end;
+    transition: opacity 0.3s ease;
+}
+.visible {
+    opacity: 1;
+    visibility: visible;
+}
+.navegacion__icon{
+    height: 1.7rem;
+    cursor: pointer;
 }
 .navegacion__lista {
-    text-align: center;
+    gap: 1rem;
+    align-items: flex-end;
 }
 .navegacion__elemento a {
-    color: var(--color-de-link);
+    color: var(--color-primario);
     font-size: 1.4rem;
 }
 
@@ -324,6 +355,9 @@ img {
     .contacto {
         padding: 0;
     }
+    .navegacion {
+        padding: 3.2rem;
+    }
 
     /* ------------------------------ Sección Presentación ------------------------------*/
     .presentacion {
@@ -362,7 +396,7 @@ img {
 }
 
 /* Pantallas grandes */
-@media (min-width: 1200px) {
+@media (min-width: 1024px) {
     h2 {
         font-size: 3.2rem;
     }
@@ -374,14 +408,31 @@ img {
         flex-direction: row;
         white-space: nowrap;
     }
-    .cabecera__descripcion {
+    .cabecera__contenedor {
         padding: 0;
+    }
+    .navegacion {
+        position: unset;
+        visibility: visible;
+        background-color: transparent;
+        box-shadow: none;
+        opacity: 1;
+        padding: 0;
+        height: auto;
+        width: auto;
     }
     .navegacion__lista {
         flex-direction: row;
         justify-content: flex-end;
         gap: 3.2rem;
         margin-top: 0;
+    }
+    .navegacion__elemento a {
+        color: var(--color-de-link);
+    }
+    .menu_icon,
+    .navegacion__icon {
+        display: none;
     }
 
     /* ------------------------------ Sección Presentación ------------------------------*/
