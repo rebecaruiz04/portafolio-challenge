@@ -1,0 +1,122 @@
+@import url('https://fonts.googleapis.com/css2?family=Francois+One&family=Poppins:wght@300;400;500;600;700;800&display=swap');
+
+:root {
+    /* Fuentes de letras */
+    --fuente-poppins: 'Poppins', sans-serif;
+    --fuente-francois-one: 'Francois One', sans-serif;
+    --fuente-helvetica: 'Helvetica', sans-serif;
+    /* Gama de colores */
+    --color-primario: #852cd3;
+    --color-secundario: #dcbef5;
+    --color-gris-oscuro: #121214;
+    --color-gris: #393a43;
+    --color-gris-claro: #8E94A2;
+    --color-gris-extra-claro: #FDFDFD;
+    --color-blanco: #FFFFFF;
+    --color-negro: #000000;  
+}
+html {
+    box-sizing: border-box;
+    font-size: 62.5%; /* 1 rem = 10px */    
+}
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+body {
+    background-color: var(--color-negro);
+    font-family: var(--fuente-poppins);
+    line-height: 1.6;
+    font-size: 1.6rem;
+}
+.contenedor {
+    max-width: 120rem;
+    margin: 0 auto;
+    padding: 1.6rem;
+}
+a {
+    text-decoration: none;
+}
+h2,h3 {
+    color: var(--color-secundario);
+}
+h2,h3,p {
+    margin: 0;
+}
+h2 {
+    font-family: var(--fuente-francois-one);
+    font-size: 2.2rem;
+    font-weight: 700;
+    text-align: center;
+}
+p {
+    font-size: 1.6rem;
+    color: var(--color-gris-extra-claro);
+}
+ol, ul, li {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+img {
+    max-width: 100%;
+}
+.header__contenedor,
+.nav__contenedor,
+.nav__lista,
+.presentacion,
+.presentacion__contenedor,
+.presentacion__detalle,
+.sobre-mi__contenedor,
+.habilidades-aficiones,
+.lista-elemento,
+.formacion__contenedor,
+.formacion__lista,
+.formacion__lista-elemento,
+.elemento__contenedor-descripcion,
+.proyectos,
+.proyectos__contenedor,
+.proyectos__contenedor-elemento,
+.elemento__contenedor-detalle,
+.detalle__contenedor-descripcion,
+.contacto__contenedor,
+.contacto__contenedor-informacion,
+.informacion__header,
+.contacto__formulario,
+.footer,
+.footer__contenedor {
+    display: flex;
+    flex-direction: column;
+}
+.logo__titulo {
+    font-family: var(--fuente-poppins);
+    font-size: 1.6rem;
+    letter-spacing: 0.5rem;
+    line-height: 1;
+    text-align: center;
+    margin: 0;
+}
+.logo__titulo span {
+    font-family: var(--fuente-helvetica);
+    font-size: 1rem;
+}
+.sobre-mi,
+.formacion,
+.contacto {
+    background-color: var(--color-gris-oscuro);
+}
+.formacion,
+.contacto {
+    padding: 1.6rem;
+}
+.boton-primario {
+    background-color: var(--color-primario);
+    color: var(--color-blanco);
+    padding: 1.2rem 1.6rem;
+    font-size: 1.4rem;
+    cursor: pointer;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+.boton-primario:hover {
+    transform: scale(1.05); /* Crece un 5%, más sutil */
+    box-shadow: 0 4px 10px rgba(133, 44, 211, 0.7); /* Agrega una sombra suave */
+}

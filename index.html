@@ -4,39 +4,40 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/normalize.css">
-    <!-- Iconos del Proyecto Bootstrap -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/globales.css">
+    <link rel="stylesheet" href="css/animaciones.css">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
 
     <link rel="icon" href="assets/favicon.ico" type="image/x-icon">
     <link rel="shortcut icon" href="assets/favicon.ico" type="image/x-icon">
     <title>Portafolio de Rebeca Ruiz</title>
-    <script src="script.js" defer></script>
+    <script src="js/script.js" defer></script>
 </head>
 
 <body>
     <!-- Menú -->
     <header class="header">
         <div class="contenedor">
-            <div class="cabecera">
-                <div class="cabecera__contenedor">
-                    <div class="cabecera__logo_contenedor">
-                        <img class="cabecera__logo" src="assets/logo_principal.png" alt="Logo">
-                        <h1 class="cabecera__titulo">REBECA RUIZ <span><br>FRONTEND DEVELOPER</span></h1>
-                    </div>
-                    <img class="menu_icon" src="assets/menu_icon.png" alt="menú">
+            <div class="header__contenedor">
+                <div class="header__contenedor-logo">
+                    <a href="#presentacion" class="logo__contenedor">
+                        <img class="logo__img" src="assets/logo_principal.png" alt="Logo">
+                        <h1 class="logo__titulo-header logo__titulo">REBECA RUIZ <span><br>FRONTEND DEVELOPER</span></h1>    
+                    </a>
+                    <button class="menu__icon"><i class="bi bi-list"></i></button>
                 </div>
-                
-                <nav class="navegacion">
-                    <img class="navegacion__icon" src="assets/cerrar_icon.png" alt="menú">
-                    <ul class="navegacion__lista">
-                        <li class="navegacion__elemento"><a href="#sobre-mi">Sobre mí</a></li>
-                        <li class="navegacion__elemento"><a href="#habilidades">Habilidades</a></li>
-                        <li class="navegacion__elemento"><a href="#aficiones">Aficiones</a></li>
-                        <li class="navegacion__elemento"><a href="#formacion">Formación</a></li>
-                        <li class="navegacion__elemento"><a href="#proyectos">Proyectos</a></li>
-                        <li class="navegacion__elemento"><a href="#contacto">Contacto</a></li>
+                <nav class="nav__contenedor">
+                    <button class="menu__cerrar"><i class="bi bi-x-lg"></i></button>
+                    <ul class="nav__lista">
+                        <li class="nav__lista-elemento"><a href="#sobre-mi">Sobre mí</a></li>
+                        <li class="nav__lista-elemento"><a href="#habilidades">Habilidades</a></li>
+                        <li class="nav__lista-elemento"><a href="#aficiones">Aficiones</a></li>
+                        <li class="nav__lista-elemento"><a href="#formacion">Formación</a></li>
+                        <li class="nav__lista-elemento"><a href="#proyectos">Proyectos</a></li>
+                        <li class="nav__lista-elemento"><a href="#contacto">Contacto</a></li>
                     </ul>
                 </nav>   
             </div>
@@ -44,30 +45,30 @@
     </header>
     
     <!-- Sección de Presentación -->
-    <section class="presentacion" id="top">
-        <div class="contenedor presentacion__contenido">
+    <section class="presentacion" id="presentacion">
+        <div class="contenedor presentacion__contenedor">
             <img class="presentacion__foto" src="assets/profile.png" alt="Foto de perfil">
-            <div class="presentacion__contenedor">
-                <h2 class="presentacion__titulo">Hola, mi nombre es Rebeca Ruiz y construyo páginas web</h2>
-                <p class="presentacion__subtitulo">
+            <div class="presentacion__detalle">
+                <h2 class="presentacion__detalle-titulo">Hola, mi nombre es Rebeca Ruiz y construyo páginas web</h2>
+                <p class="presentacion__detalle-descripcion">
                     Soy formada en Desarrollo de Software como carrera técnica en ISIL, 
                     también en la carrera de Dirección de Tecnologías de Información 
                     como bachiller en la Escuela Isil y actualmente estoy participando 
                     del proyecto Oracle ONE en Alura Latam.
                 </p>
-                <ul class="redes">
-                    <li class="redes__img"><a href="https://github.com/rebecaruiz04?tab=repositories" target="_blank"><i class="bi bi-github"></i></a></li>
-                    <li class="redes__img"><a href="https://www.linkedin.com/in/rebeca-ruiz-developer/" target="_blank"><i class="bi bi-linkedin"></i></a></li>
-                    <li class="redes__img"><a href="docs/CV_RebecaRuiz.pdf" download="CV_RebecaRuiz.pdf" target="_blank">CV <i class="bi bi-cloud-arrow-down-fill"></i></a></li>
+                <ul class="presentacion__redes">
+                    <li class="presentacion__redes-icon"><a href="https://github.com/rebecaruiz04?tab=repositories" target="_blank"><i class="bi bi-github"></i></a></li>
+                    <li class="presentacion__redes-icon"><a href="https://www.linkedin.com/in/rebeca-ruiz-developer/" target="_blank"><i class="bi bi-linkedin"></i></a></li>
+                    <li class="presentacion__redes-icon"><a href="docs/CV_RebecaRuiz.pdf" download="CV_RebecaRuiz.pdf" target="_blank">CV <i class="bi bi-cloud-arrow-down-fill"></i></a></li>
                 </ul>
             </div>
-            <a href="#sobre-mi" class="boton-flotante"><i class="bi bi-arrow-down"></i></a>
         </div>
+        <a href="#sobre-mi" class="boton-down"><i class="bi bi-arrow-down"></i></a>
     </section>
 
     <!-- Sección sobre mí -->
     <section class="sobre-mi" id="sobre-mi">
-        <div class="contenedor sobre-mi__contenido">
+        <div class="contenedor sobre-mi__contenedor">
             <h2 class="sobre-mi__titulo">Sobre mí</h2>
             <p class="sobre-mi__texto">
                 Soy una desarrolladora de software enfocada en Front-End, 
@@ -86,127 +87,129 @@
                 Si estás buscando a alguien que aporte creatividad, precisión y compromiso... 
                 <br>¡¡¡Estás en el lugar correcto 😉🥳🎊🎉!!!
             </p>
-            <img class="sobre-mi__imagen" src="assets/frontend_developer.png" alt="">
+            <div class="sobre-mi__ilustracion">
+                <img src="assets/frontend_developer.png" alt="">   
+            </div>
         </div>
     </section>
 
     <!-- Sección de Habilidades -->
-    <section class="contenedor habilidades" id="habilidades">
-        <h2 class="habilidades__titulo">Habilidades</h2>
-        <ul class="habilidades__lista">
-            <li class="habilidades__elemento">
-                <img class="habilidades__icono" src="assets/react_icon.png" alt="React">
-                <p class="habilidades__nombre">React</p>
+    <section class="contenedor habilidades-aficiones" id="habilidades">
+        <h2 class="titulo">Habilidades</h2>
+        <ul class="lista">
+            <li class="lista-elemento">
+                <img class="elemento__icono" src="assets/react_icon.png" alt="React">
+                <p class="elemento__nombre">React</p>
             </li>
-            <li class="habilidades__elemento">
-                <img class="habilidades__icono" src="assets/html5_icon.png" alt="HTML">
-                <p class="habilidades__nombre">HTML 5</p>
+            <li class="lista-elemento">
+                <img class="elemento__icono" src="assets/html5_icon.png" alt="HTML">
+                <p class="elemento__nombre">HTML 5</p>
             </li>
-            <li class="habilidades__elemento">
-                <img class="habilidades__icono" src="assets/css_icon.png" alt="CSS">
-                <p class="habilidades__nombre">CSS</p>
+            <li class="lista-elemento">
+                <img class="elemento__icono" src="assets/css_icon.png" alt="CSS">
+                <p class="elemento__nombre">CSS</p>
             </li>
-            <li class="habilidades__elemento">
-                <img class="habilidades__icono" src="assets/js_icon.png" alt="JavaScript">
-                <p class="habilidades__nombre">JavaScript</p>
+            <li class="lista-elemento">
+                <img class="elemento__icono" src="assets/js_icon.png" alt="JavaScript">
+                <p class="elemento__nombre">JavaScript</p>
             </li>
-            <li class="habilidades__elemento">
-                <img class="habilidades__icono" src="assets/sqlServer_icon.png" alt="PHP">
-                <p class="habilidades__nombre">SQL Server</p>
+            <li class="lista-elemento">
+                <img class="elemento__icono" src="assets/sqlServer_icon.png" alt="PHP">
+                <p class="elemento__nombre">SQL Server</p>
             </li>
-            <li class="habilidades__elemento">
-                <img class="habilidades__icono" src="assets/swift_icon.png" alt="PHP">
-                <p class="habilidades__nombre">Swift</p>
+            <li class="lista-elemento">
+                <img class="elemento__icono" src="assets/swift_icon.png" alt="PHP">
+                <p class="elemento__nombre">Swift</p>
             </li>
-            <li class="habilidades__elemento">
-                <img class="habilidades__icono" src="assets/mysql_icon.png" alt="PHP">
-                <p class="habilidades__nombre">MySQL</p>
+            <li class="lista-elemento">
+                <img class="elemento__icono" src="assets/mysql_icon.png" alt="PHP">
+                <p class="elemento__nombre">MySQL</p>
             </li>
-            <li class="habilidades__elemento">
-                <img class="habilidades__icono" src="assets/nodejs_icon.png" alt="Node.js">
-                <p class="habilidades__nombre">Node JS</p>
+            <li class="lista-elemento">
+                <img class="elemento__icono" src="assets/nodejs_icon.png" alt="Node.js">
+                <p class="elemento__nombre">Node JS</p>
             </li>
-            <li class="habilidades__elemento">
-                <img class="habilidades__icono" src="assets/java_icon.png" alt="PHP">
-                <p class="habilidades__nombre">Java</p>
+            <li class="lista-elemento">
+                <img class="elemento__icono" src="assets/java_icon.png" alt="PHP">
+                <p class="elemento__nombre">Java</p>
             </li>
-            <li class="habilidades__elemento">
-                <img class="habilidades__icono" src="assets/php_icon.png" alt="PHP">
-                <p class="habilidades__nombre">PHP</p>
+            <li class="lista-elemento">
+                <img class="elemento__icono" src="assets/php_icon.png" alt="PHP">
+                <p class="elemento__nombre">PHP</p>
             </li>
-            <li class="habilidades__elemento">
-                <img class="habilidades__icono" src="assets/kotlin_icon.png" alt="PHP">
-                <p class="habilidades__nombre">Kotlin</p>
+            <li class="lista-elemento">
+                <img class="elemento__icono" src="assets/kotlin_icon.png" alt="PHP">
+                <p class="elemento__nombre">Kotlin</p>
             </li>
-            <li class="habilidades__elemento">
-                <img class="habilidades__icono" src="assets/python_icon.png" alt="PHP">
-                <p class="habilidades__nombre">Python</p>
+            <li class="lista-elemento">
+                <img class="elemento__icono" src="assets/python_icon.png" alt="PHP">
+                <p class="elemento__nombre">Python</p>
             </li>
         </ul>
     </section>
 
     <!-- Sección de Aficiones -->
-    <section class="contenedor aficiones" id="aficiones">
-        <h2 class="aficiones__titulo">Aficiones</h2>
-        <ul class="aficiones__lista">
-            <li class="aficiones__elemento">
-                <img class="aficiones__icono" src="assets/headphones_icon.png" alt="Oír música">
-                <p class="aficiones__nombre">Oír música</p>
+    <section class="contenedor habilidades-aficiones" id="aficiones">
+        <h2 class="titulo">Aficiones</h2>
+        <ul class="lista">
+            <li class="lista-elemento">
+                <img class="elemento__icono" src="assets/headphones_icon.png" alt="Oír música">
+                <p class="elemento__nombre">Oír música</p>
             </li>
-            <li class="aficiones__elemento">
-                <img class="aficiones__icono" src="assets/tv_icon.png" alt="Ver series">
-                <p class="aficiones__nombre">Ver series</p>
+            <li class="lista-elemento">
+                <img class="elemento__icono" src="assets/tv_icon.png" alt="Ver series">
+                <p class="elemento__nombre">Ver series</p>
             </li>
-            <li class="aficiones__elemento">
-                <img class="aficiones__icono" src="assets/cubiertos_icon.png" alt="Cocinar">
-                <p class="aficiones__nombre">Cocinar</p>
+            <li class="lista-elemento">
+                <img class="elemento__icono" src="assets/cubiertos_icon.png" alt="Cocinar">
+                <p class="elemento__nombre">Cocinar</p>
             </li>
-            <li class="aficiones__elemento">
-                <img class="aficiones__icono" src="assets/camara_icon.png" alt="Tomar fotos">
-                <p class="aficiones__nombre">Tomar fotos</p>
+            <li class="lista-elemento elemento-medio">
+                <img class="elemento__icono" src="assets/camara_icon.png" alt="Tomar fotos">
+                <p class="elemento__nombre">Tomar fotos</p>
             </li>
         </ul>
     </section>
 
     <!-- Sección de Formación académica -->
     <section class="formacion" id="formacion">
-        <div class="contenedor formacion__contenido">
+        <div class="contenedor formacion__contenedor">
             <h2 class="formacion__titulo">Formación académica</h2>
             <ul class="formacion__lista">
-                <li class="formacion__elemento">
-                    <div class="formacion__elemento_icono">
-                        <img class="formacion__icono" src="assets/isil_logo.png" alt="UFPR">   
+                <li class="formacion__lista-elemento">
+                    <div class="elemento__contenedor-img">
+                        <img class="img__institucion" src="assets/isil_logo.png" alt="UFPR">   
                     </div>
-                    <div class="formacion__descripcion">
-                        <h3 class="formacion__nombre">Dirección de Tecnologías de Información</h3>
-                        <p class="formacion__detalle">2024 - ISIL</p>
-                    </div>
-                </li>
-                <li class="formacion__elemento">
-                    <div class="formacion__elemento_icono">
-                        <img class="formacion__icono" src="assets/alura_logo.png" alt="Alura">    
-                    </div>
-                    <div class="formacion__descripcion">
-                        <h3 class="formacion__nombre">Formación FrontEnd Developer</h3>
-                        <p class="formacion__detalle">2024 - Alura</p>
+                    <div class="elemento__contenedor-descripcion">
+                        <h3 class="descripcion__nombre">Dirección de Tecnologías de Información</h3>
+                        <p class="descripcion__detalle">2024 - ISIL</p>
                     </div>
                 </li>
-                <li class="formacion__elemento">
-                    <div class="formacion__elemento_icono">
-                        <img class="formacion__icono" src="assets/digitalhouse_logo.png" alt="UFRJ">
+                <li class="formacion__lista-elemento">
+                    <div class="elemento__contenedor-img">
+                        <img class="img__institucion" src="assets/alura_logo.png" alt="Alura">    
                     </div>
-                    <div class="formacion__descripcion">
-                        <h3 class="formacion__nombre">Formación FullStack Developer</h3>
-                        <p class="formacion__detalle">2024 - Digital House</p>
+                    <div class="elemento__contenedor-descripcion">
+                        <h3 class="descripcion__nombre">Formación FrontEnd Developer</h3>
+                        <p class="descripcion__detalle">2024 - Alura</p>
                     </div>
                 </li>
-                <li class="formacion__elemento">
-                    <div class="formacion__elemento_icono">
-                        <img class="formacion__icono" src="assets/sise_logo.png" alt="UFRJ">
+                <li class="formacion__lista-elemento">
+                    <div class="elemento__contenedor-img">
+                        <img class="img__institucion" src="assets/digitalhouse_logo.png" alt="UFRJ">
                     </div>
-                    <div class="formacion__descripcion">
-                        <h3 class="formacion__nombre">Cajero Bancario</h3>
-                        <p class="formacion__detalle">2014 - SISE</p>
+                    <div class="elemento__contenedor-descripcion">
+                        <h3 class="descripcion__nombre">Formación FullStack Developer</h3>
+                        <p class="descripcion__detalle">2024 - Digital House</p>
+                    </div>
+                </li>
+                <li class="formacion__lista-elemento">
+                    <div class="elemento__contenedor-img">
+                        <img class="img__institucion" src="assets/sise_logo.png" alt="UFRJ">
+                    </div>
+                    <div class="elemento__contenedor-descripcion">
+                        <h3 class="descripcion__nombre">Cajero Bancario</h3>
+                        <p class="descripcion__detalle">2014 - SISE</p>
                     </div>
                 </li>
             </ul>
@@ -217,25 +220,42 @@
     <section class="contenedor proyectos" id="proyectos">
         <h2 class="proyectos__titulo">Experiencia Profesional</h2>
         <div class="proyectos__contenedor">
-            <div class="proyectos__contenedor-encriptador">
+            <div class="proyectos__contenedor-elemento elemento-izquierda">
                 <img src="assets/pry_encriptador.png" alt="encriptador-de-texto">
-                <div class="encriptador__detalle">
-                    <h3 class="proyectos__nombre">Encriptador de texto</h3>
-                    <p class="proyectos__descripcion">Challenge Alura Codificador</p>
-                    <div class="proyectos__enlaces">
-                        <a href="https://github.com/rebecaruiz04/encriptador-de-texto" target="_blank">Repositorio</a>
-                        <a href="https://rebecaruiz04.github.io/encriptador-de-texto/" target="_blank">Ver demo</a>
+                <div class="elemento__contenedor-detalle">
+                    <div class="detalle__contenedor-descripcion">
+                        <h3 class="descripcion__titulo">Encriptador de texto</h3>
+                        <p class="descripcion__subtitulo">Challenge Alura Codificador</p>
+                    </div>
+                    <div class="detalle__contenedor-enlaces">
+                        <a class="boton-primario" href="https://github.com/rebecaruiz04/encriptador-de-texto" target="_blank">Repositorio</a>
+                        <a class="boton-primario" href="https://rebecaruiz04.github.io/encriptador-de-texto/" target="_blank">Ver demo</a>
                     </div>
                 </div>
             </div>
-            <div class="proyectos__contenedor-juego">
+            <div class="proyectos__contenedor-elemento elemento-derecha">
                 <img src="assets/pry_juego.png" alt="juego-del-numero-secreto">
-                <div class="juego__detalle">
-                    <h3 class="proyectos__nombre">Encriptador de texto</h3>
-                    <p class="proyectos__descripcion">Challenge Alura Codificador</p>
-                    <div class="proyectos__enlaces">
-                        <a href="https://github.com/rebecaruiz04/juego-secreto" target="_blank">Repositorio</a>
-                        <a href="https://rebecaruiz04.github.io/juego-secreto/" target="_blank">Ver demo</a>
+                <div class="elemento__contenedor-detalle">
+                    <div class="detalle__contenedor-descripcion">
+                        <h3 class="descripcion__titulo">Encriptador de texto</h3>
+                        <p class="descripcion__subtitulo">Challenge Alura Codificador</p>
+                    </div>
+                    <div class="detalle__contenedor-enlaces">
+                        <a class="boton-primario" href="https://github.com/rebecaruiz04/juego-secreto" target="_blank">Repositorio</a>
+                        <a class="boton-primario" href="https://rebecaruiz04.github.io/juego-secreto/" target="_blank">Ver demo</a>
+                    </div>
+                </div>
+            </div>
+            <div class="proyectos__contenedor-elemento elemento-izquierda">
+                <img src="assets/pry_portafolio.png" alt="portafolio-challenge">
+                <div class="elemento__contenedor-detalle">
+                    <div class="detalle__contenedor-descripcion">
+                        <h3 class="descripcion__titulo">Encriptador de texto</h3>
+                        <p class="descripcion__subtitulo">Challenge Alura Codificador</p>
+                    </div>
+                    <div class="detalle__contenedor-enlaces">
+                        <a class="boton-primario" href="https://github.com/rebecaruiz04/portafolio-challenge" target="_blank">Repositorio</a>
+                        <a class="boton-primario" href="https://rebecaruiz04.github.io/portafolio-challenge/" target="_blank">Ver demo</a>
                     </div>
                 </div>
             </div>
@@ -244,69 +264,64 @@
 
     <!-- Sección de Contacto -->
     <section class="contacto" id="contacto">
-        <div class="contenedor contacto__contenido">
+        <div class="contenedor contacto__contenedor">
             <img src="assets/contact_image.png" alt="telefono">
-            <div class="contacto__informacion">
-                <div class="contacto__header">
-                    <h2 class="contacto__titulo">Contacto</h2>
-                    <p class="contacto__descripcion">
+            <div class="contacto__contenedor-informacion">
+                <div class="informacion__header">
+                    <h2 class="informacion__header-titulo">Contacto</h2>
+                    <p class="informacion__header-descripcion">
                         ¿Quieres contactarme?
                         <br>Complete el siguiente formulario  y me pondré en contacto con usted lo antes posible.
                     </p>
                 </div>
                 <form class="contacto__formulario">
-                    <div class="contacto__grupo">
-                        <input id="nombre" class="contacto__campo" type="text" placeholder="" required>
-                        <label for="nombre" class="contacto__label">Nombre</label>
+                    <div class="contacto__formulario-campo">
+                        <input id="nombre" class="campo__input" type="text" placeholder="" required>
+                        <label for="nombre" class="campo__label">Nombre</label>
                     </div>
-                    <div class="contacto__grupo">
-                        <input id="email" class="contacto__campo" type="email" placeholder="" required>
-                        <label for="email" class="contacto__label">E-mail</label>
+                    <div class="contacto__formulario-campo">
+                        <input id="email" class="campo__input" type="email" placeholder="" required>
+                        <label for="email" class="campo__label">E-mail</label>
                     </div>
-                    <div class="contacto__grupo">
-                        <textarea id="mensaje" class="contacto__campo contacto__campo--textarea" placeholder=""></textarea>
-                        <label for="mensaje" class="contacto__label">Mensaje</label>
+                    <div class="contacto__formulario-campo">
+                        <textarea id="mensaje" class="campo__input textarea" placeholder=""></textarea>
+                        <label for="mensaje" class="campo__label textarea">Mensaje</label>
                     </div>
-                    <button class="contacto__boton boton-primario" type="submit">Enviar mensaje</button>
+                    <button class="contacto__formulario-boton boton-primario" type="submit">Enviar mensaje</button>
                 </form>
             </div>
-            
         </div>
-        
     </section>
 
-    <a href="#top" class="boton-flotante-arriba">
+    <a href="#presentacion" class="boton-up">
         <i class="bi bi-caret-up-fill"></i>
     </a>
 
     <footer class="footer">
-        <div class="contenedor footer__contenido">
-            <div class="footer__descripcion">
+        <div class="contenedor footer__contenedor">
+            <div class="footer__contenedor-detalle">
                 <h3 class="footer__titulo">¿Qué puedo hacer?</h3>
-                <ul class="footer__lista">
+                <ul class="detalle__lista">
                     <li>Páginas webs corporativas</li>
                     <li>Desarrollo web a medida</li>
                     <li>Tiendas online</li>
                     <li>Apps Móviles</li>
                 </ul>
             </div>
-            <div class="footer__redes">
+            <div class="footer__contenedor-redes">
                 <h3 class="footer__titulo">Sígueme en redes</h3>
-                <ul>
-                    <li class="footer-item"><a href=""><i class="bi bi-linkedin"></i></a></li>
-                    <li class="footer-item"><a href=""><i class="bi bi-instagram"></i></a></li>
-                    <li class="footer-item"><a href=""><i class="bi bi-facebook"></i></a></li>
-                    <li class="footer-item"><a href=""><i class="bi bi-twitter-x"></i></a></li>
+                <ul class="redes__lista">
+                    <li class="redes__lista-elemento"><a href="https://www.linkedin.com/in/rebeca-ruiz-developer/" target="_blank"><i class="bi bi-linkedin"></i></a></li>
+                    <li class="redes__lista-elemento"><a href="https://www.instagram.com/rebecaruizguardia/" target="_blank"><i class="bi bi-instagram"></i></a></li>
+                    <li class="redes__lista-elemento"><a href="https://www.facebook.com/rebecaantonella.ruizguardia" target="_blank"><i class="bi bi-facebook"></i></a></li>
+                    <li class="redes__lista-elemento"><a href="https://x.com/rebecaruiz04" target="_blank"><i class="bi bi-twitter-x"></i></a></li>
                 </ul>
-
             </div>
-            <div class="footer__logo">
-                <div class="footer__logo-contenedor">
-                    <img class="footer__logo-img" src="assets/logo_principal.png" alt="Logo">
-                    <h2 class="footer__logo-titulo">REBECA RUIZ <span><br>FRONTEND DEVELOPER</span></h2>
-                </div>
-                <p>© Rebeca Ruiz | Lima - Perú | 2024</p>
-            </div>
+            <a href="#presentacion" class="logo__contenedor logo__contenedor-footer">
+                <img class="logo__img" src="assets/logo_principal.png" alt="Logo">
+                <h2 class="logo__titulo-footer logo__titulo">REBECA RUIZ <span><br>FRONTEND DEVELOPER</span></h2>
+            </a>
+            <p class="footer__derecho-de-autor">© Rebeca Ruiz | Lima - Perú | 2024</p>
         </div>
     </footer>
 
