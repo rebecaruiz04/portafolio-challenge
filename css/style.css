@@ -38,7 +38,7 @@
     border: none;
     padding: 0;
     cursor: pointer;
-    transition: transform 0.3s ease
+    transition: transform 0.3s ease, color 0.3s ease;
 }
 .menu__icon {
     font-size: 3.5rem;
@@ -46,10 +46,9 @@
 .menu__cerrar {
     font-size: 2.5rem;
 }
-.menu__icon:hover {
-    transform: scale(0.8);
-}
+.menu__icon:hover,
 .menu__cerrar:hover {
+    color: var(--color-primario);
     transform: scale(0.8);
 }
 .logo__img {
@@ -75,7 +74,7 @@
     padding: 2.5rem 1.6rem;
     background-color: #1c1c1c;
     box-shadow: 0 0 0 100vmax rgba(0, 0, 0, .5);
-    gap: 1rem;
+    gap: 2rem;
     align-items: flex-end;
     transition: opacity 0.3s ease, transform 0.3s ease;
     transform: translateX(100%);
@@ -86,15 +85,18 @@
     transform: translateX(0);
 }
 .nav__lista {
-    gap: 1rem;
+    gap: 1.5rem;
     align-items: flex-end;
 }
 .nav__lista-elemento a {
+    display: inline-block;
     font-size: 1.4rem;
     color: var(--color-gris-extra-claro);
+    transition: transform 0.3s ease;
 }
 .nav__lista-elemento a:hover {
     color: var(--color-primario);
+    transform: scale(1.2);
 }
 
 /* ------------------------------ Sección Presentación ------------------------------*/

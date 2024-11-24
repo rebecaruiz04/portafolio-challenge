@@ -205,7 +205,7 @@
     .contacto__contenedor {
         padding: 12.8rem 3.2rem 6.4rem 3.2rem;
         display: grid;
-        grid-template-columns: 1fr 2fr; /* Dos columnas: imagen y contenido */
+        grid-template-columns: 1fr 2fr;
         gap: 1.6rem;
     }
     .contacto__contenedor img {
