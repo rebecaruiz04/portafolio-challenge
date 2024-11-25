@@ -122,9 +122,9 @@
         padding-top: 0;
     }
     .presentacion__contenedor {
-        padding-top: 11.6rem;
+        padding-top: 11rem;
         grid-template-columns: 2fr 1fr;
-        gap: 5rem;
+        gap: 2rem;
     }
     .presentacion__detalle {
         gap: 2.4rem;
