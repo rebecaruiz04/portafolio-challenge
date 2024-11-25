@@ -1,4 +1,8 @@
 /* ------------------------------ Sección Menú -------------------------------*/
+.contenedor__top {
+    background: rgb(133,44,211);
+    background: linear-gradient(301deg, rgba(133,44,211,1) 4%, rgba(0,0,0,1) 59%);
+}
 .header {
     position: fixed;
     top: 0;
@@ -104,6 +108,7 @@
     background: rgb(133,44,211);
     background: linear-gradient(301deg, rgba(133,44,211,1) 4%, rgba(0,0,0,1) 59%);
     height: 100vh;
+    padding-top: 8.5rem;
     justify-content: center;
 }
 .presentacion__contenedor {
@@ -146,15 +151,11 @@
     color: var(--color-primario);
 }
 .boton-down {
-    position: absolute; 
-    bottom: 2.5rem;
-    left: 50%;
     padding: 10px 16px;
     color: var(--color-gris-extra-claro);
     font-size: 2rem;
     background-color: var(--color-primario);
     border-radius: 50%;
-    transform: translateX(-50%) translateY(-20px);
     opacity: 0;
     transition: 
         opacity 0.4s ease, 
@@ -164,10 +165,9 @@
 }
 .boton-down.visible {
     opacity: 1;
-    transform: translateX(-50%) translateY(0);
 }
 .boton-down:hover {
-    transform: translateX(-50%) scale(1.2);
+    transform: scale(1.2);
     box-shadow: 0 8px 20px rgba(133, 44, 211, 0.8);
 }
 
