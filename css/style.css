@@ -80,6 +80,7 @@
     box-shadow: 0 0 0 100vmax rgba(0, 0, 0, .5);
     gap: 2rem;
     align-items: flex-end;
+    z-index: 1000;
     transition: opacity 0.3s ease, transform 0.3s ease;
     transform: translateX(100%);
 }
@@ -340,32 +341,141 @@
 .contacto__formulario-boton {
     align-self: flex-start;
     border: none;
-    
+}
+
+/*------------------------------ Boton-whatsapp -----------------------------------------------*/
+/* Estilo para el ícono de WhatsApp flotante */
+.boton-flotante {
+    position: fixed;
+    right: 3rem;
+    z-index: 1000;
+    background-color: var(--color-primario);
+    color: var(--color-gris-extra-claro);
+    box-shadow: 0 4px 10px rgba(133,44,211, 0.6);
+    font-size: 2rem;
+    text-align: center;
+    cursor: pointer;
+    opacity: 0;
+    visibility: hidden;
+    transition: 
+        opacity 0.3s ease, 
+        visibility 0.3s ease, 
+        transform 0.5s ease, 
+        background-color 0.5s ease, 
+        box-shadow 0.5s ease;
+    padding: 1rem 1.6rem;
+}
+.boton-whatsapp {
+    position: fixed;
+    bottom: 14rem;
+    border-radius: 50%;
+}
+.boton-whatsapp:hover {
+    background-color: #46c654;
+    transform: scale(1.1);
+    box-shadow: 0 4px 10px rgba(70,198,84, 0.8);
 }
 
 /*------------------------------ Boton-up -----------------------------------------------*/
 .boton-up {
-    position: fixed;
     bottom: 6rem;
-    right: 3rem;
-    padding: 1rem;
-    width: 5rem;
-    height: 5rem;
-    text-align: center;
-    background-color: var(--color-primario);
-    color: var(--color-gris-extra-claro);
-    font-size: 2rem;
-    cursor: pointer;
     border-radius: 1rem;
-    box-shadow: 0 4px 10px rgba(133,44,211, 0.5);
-    z-index: 1000;
-    opacity: 0;
-    visibility: hidden;
-    transition: opacity 0.3s ease, visibility 0.3s ease, transform 0.5s ease, box-shadow 0.5s ease;
 }
 .boton-up:hover {
     transform: scale(1.1);
     box-shadow: 0 4px 10px rgba(133,44,211, 0.8);
+}
+
+/*------------------------------ Modal -----------------------------------------------*/
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    box-sizing: border-box;
+}
+.modal.hidden {
+    display: none;
+}
+.modal__contenedor {
+    position: relative;
+    top: 30%;
+    background-color: var(--color-negro);
+    margin: 0 auto;
+    padding: 3rem;
+    border-radius: 1rem;
+    border: 2px solid var(--color-gris-extra-claro);
+    width: 80%;
+    max-width: 40rem;
+    text-align: center;
+}
+.modal__icon-cerrar {
+    color: var(--color-gris-extra-claro);
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 28px;
+    font-weight: bold;
+}
+.modal__icon-cerrar:hover,
+.modal__icon-cerrar:focus {
+    color: var(--color-primario);
+    cursor: pointer;
+}
+.modal__campo {
+    padding: 1rem;
+    font-size: 1.6rem;
+    width: 100%;
+    margin-top: 20px;
+    border-radius: 0.5rem;
+    background-color: var(--color-gris-extra-claro);
+    border: none;
+    outline: none;
+    color: var(--color-gris-oscuro);
+}
+.modal__campo::placeholder {
+    color: var(--color-gris-claro);
+}
+.modal__titulo {
+    color: var(--color-primario);
+    font-size: 2.3rem;
+}
+.modal__boton {
+    margin-top: 20px;
+    border: none;
+}
+
+/*------------------------------ Notificación -----------------------------------------------*/
+.notificacion {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    padding: 1rem 1.5rem;
+    border-radius: 8px;
+    font-size: 1.4rem;
+    color: #fff;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+    z-index: 1000;
+}
+.notificacion.success {
+    background-color: #4caf50; /* Verde */
+}
+.notificacion.error {
+    background-color: #f44336; /* Rojo */
+}
+.notificacion.hidden {
+    opacity: 0;
+    transform: translateY(-20px);
+    pointer-events: none;
+}
+.notificacion.visible {
+    opacity: 1;
+    transform: translateY(0);
 }
 
 /*------------------------------ Footer -----------------------------------------------*/

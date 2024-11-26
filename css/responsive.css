@@ -62,10 +62,8 @@
         display: grid;
         grid-template-columns: repeat(2, 1fr);
     }
-    .boton-up {
-        padding: 0.6rem;
-        width: 6rem;
-        height: 6rem;
+    .boton-flotante {
+        padding: 0.6rem 1.5rem;
         font-size: 3rem;
         text-align: center;
     }
